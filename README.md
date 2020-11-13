@@ -18,6 +18,7 @@ nohup ./navicat15-premium-cs.AppImage >/dev/null 2>&1 &
 ```
 ## 使用start.sh启动,软件过期后自动重置，可以不注册重复使用
 ```
+在navicat的相同目录下执行start.sh
 ./start.sh
 在创建连接后，通过工具导出连接后保存为connect文件，后续过期后重启可以导入连接，保证连接不会丢失
 
