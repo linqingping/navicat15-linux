@@ -5,8 +5,7 @@ if [ -s startdate ];then
     s1=$((${timeStamp}-${datevale}))
     s2=1123200
     if [ $s1 -gt $s2 ];then
-	rm -fr /tmp/.config/navicat
-	rm -fr /root/.config/navicat
+	find / -name navicat 2>/dev/null|grep "/.config/"|awk {'print $1'} | xargs rm -fr
         echo ${timeStamp}>startdate
 	echo "超过试用期,启动软件后需要重新导入连接文件connect！"
     else
